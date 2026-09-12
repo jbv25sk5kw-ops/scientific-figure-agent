@@ -11,6 +11,23 @@ Classify each claim:
 
 If a critical claim is not E1/E2, either verify it externally or visually mark uncertainty.
 
+## Source-constrained mode
+
+Enable when a user provides a specific paper/source or says the figure must be based on that source.
+
+Use this evidence order:
+1. E1 source-supported claims define the confirmed mechanism layer.
+2. E2 stable structural/context knowledge may support orientation, anatomy, or basic biological context.
+3. Externally verified additions must remain distinguishable from the supplied source.
+4. E3 may appear only as explicitly proposed/hypothesized.
+5. E4 must not appear as confirmed.
+
+Do not expand a narrow paper into a broad mechanistic story merely because the added biology is plausible.
+
+If a requested claim exceeds the supplied source:
+- verify with an authoritative source when external verification is allowed, or
+- flag the limitation and keep it out of the confirmed layer.
+
 ## Relationship semantics
 
 - Confirmed causal relation: solid directional arrow
