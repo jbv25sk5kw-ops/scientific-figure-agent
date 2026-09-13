@@ -38,6 +38,22 @@ Expected behavior:
 - regeneration and mature recovery should look different
 - avoid generic unlabeled cell clouds
 
+## Case 4 — AI-assisted prime-editing graphical abstract
+
+Brief:
+Create one continuous graphical abstract showing pathogenic variant → prime-editing candidate design → mechanistic ML/OptiPrime prediction → prioritized pegRNA/nsgRNA designs → cell validation → in vivo mouse validation → corrected sequence. Use a manuscript-style visual language and avoid pseudo-data.
+
+Expected behavior:
+- dominant reading direction is left-to-right or top-to-bottom
+- major workflow arrows are flat, simple, and semantically consistent
+- model-input arrows are visually distinguishable from molecular activation when ambiguity is possible
+- delivery into cells or mice is labeled when the action is otherwise unclear
+- inhibition, if shown, uses a T-shaped blunt ending rather than an activation arrow
+- large green check marks are replaced by labels such as `prioritized`, `selected`, or `validated` when space permits
+- mutant versus corrected state is not encoded by red/green alone; add text or sequence-level change
+- decorative ellipses are replaced by grouped labels such as `multiple candidates` when they create ambiguity
+- no glow, heavy shadows, or gradient-heavy connectors in manuscript mode
+
 ## Pass criteria
 
 A revision is better only if it measurably improves:
@@ -45,6 +61,7 @@ A revision is better only if it measurably improves:
 - requirement coverage
 - interpretability
 - visual hierarchy
+- arrow/symbol semantic clarity
 - editability where requested
 
 More text or more rules alone do not count as improvement.
