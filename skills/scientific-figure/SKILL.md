@@ -18,9 +18,9 @@ Turn a research brief into a scientifically rigorous, visually restrained, publi
 5. Build a REQUIRED-ENTITY MANIFEST for scientifically essential cells, molecules, tissues, receptors, organelles, and anatomical structures. Record identity, role, location, morphology cue, and whether a visible label is required.
 6. Classify figure type and visual architecture.
 7. Choose rendering mode and output mode.
-8. Apply scientific evidence boundaries, morphology/localization rules, visual grammar, text budget, and academic palette.
+8. Apply scientific evidence boundaries, morphology/localization rules, arrow-and-symbol semantics, visual grammar, text budget, and academic palette.
 9. Compose the generation prompt from the evidence map and entity manifest.
-10. Audit the generated image against the brief, evidence map, and entity manifest for scientific accuracy, requirement coverage, visual hierarchy, and misleading pseudo-data.
+10. Audit the generated image against the brief, evidence map, entity manifest, and arrow/symbol semantics for scientific accuracy, requirement coverage, visual hierarchy, and misleading pseudo-data.
 11. Route correction: accept, minor edit, local edit, partial regeneration, or full regeneration.
 
 ## Source-constrained mode
@@ -38,9 +38,12 @@ When the task is anchored to a specific paper/source:
 - Never fabricate quantitative data, curves, percentages, scale bars, or measurement-like graphics.
 - Do not turn correlation or hypothesis into confirmed causation.
 - Use standard activation/inhibition semantics; inhibition uses a T-shaped blunt line.
+- Every arrow, connector, status symbol, and color-coded state must have one clear scientific or workflow meaning.
+- Do not use color alone to encode a critical conclusion; pair it with text, shape, nucleotide identity, border style, or another redundant cue.
+- Do not let delivery arrows, model-input arrows, workflow arrows, and biological causal arrows become visually indistinguishable when that could mislead the reader.
 - Critical cells, receptors, organelles, and anatomical structures must be visually identifiable and placed in biologically plausible locations.
 - A required entity is not satisfied merely because a generic colored object appears; its identity must be supported by morphology, location, context, or a concise label.
-- For manuscript/thesis figures, default to low-saturation, high-lightness academic colors, restrained text, and strong whitespace.
+- For manuscript/thesis figures, default to low-saturation, high-lightness academic colors, restrained text, flat connectors, and strong whitespace.
 - If the reader can infer a point from the visual structure, do not repeat it as a sentence inside the figure.
 - Maintain one primary visual anchor and no more than two secondary anchors in manuscript/thesis mode.
 
@@ -51,11 +54,12 @@ Read only the references needed for the current task:
 - `references/scientific-accuracy.md` — evidence classes, uncertainty, source-constrained mode, localization, causal claims, and scientific QA.
 - `references/figure-types.md` — figure-type and visual-architecture routing.
 - `references/rendering-output.md` — 2D/semi-3D/hybrid rendering, raster vs hybrid/full vector, and text strategy.
-- `references/academic-style.md` — pale academic palette, typography, arrows, layout, text budget, and visual restraint.
+- `references/academic-style.md` — pale academic palette, typography, layout, text budget, and visual restraint.
+- `references/arrow-symbol-semantics.md` — workflow arrows, activation/inhibition, model inputs, delivery arrows, selection symbols, color redundancy, and connector consistency.
 - `references/morphology-localization.md` — entity-manifest morphology and spatial-localization checks.
 - `references/reference-decomposition.md` — how to extract visual grammar from a reference image without copying unsupported science.
 - `references/post-generation-audit.md` — scientific/visual audit and correction routing after generation.
-- `references/test-cases.md` — regression cases from SARS, HIV, and muscle-injury figures.
+- `references/test-cases.md` — regression cases from SARS, HIV, muscle-injury, and AI-assisted prime-editing figures.
 
 ## Quick routing
 
@@ -84,8 +88,9 @@ Before generation, produce internally:
 - evidence map for required claims
 - required-entity manifest: identity, role, location, morphology cue, label requirement
 - required relationships and direction
+- arrow/symbol semantic map for any nontrivial connector classes
 - primary visual anchor
 - scientific risks/uncertainties
 - final generation prompt
 
-After generation, audit the rendered image against the same evidence map and entity manifest. Return the final image plus a concise scientific-confidence note when the task requires verification.
+After generation, audit the rendered image against the same evidence map, entity manifest, and arrow/symbol semantic map. Return the final image plus a concise scientific-confidence note when the task requires verification.
