@@ -13,6 +13,23 @@ Check whether every must-have object, relationship, state, and outcome appears.
 ### Scientific accuracy
 Check names, directionality, localization, causal strength, anatomical plausibility, and whether unsupported mechanisms were added.
 
+### Arrow and symbol semantics
+Check whether every connector and symbol has one clear scientific or workflow meaning.
+
+Verify:
+- arrow direction matches the intended process or information flow;
+- inhibition/blockade uses a T-shaped blunt ending rather than an activation arrow;
+- proposed or hypothetical relationships are visually distinguished from confirmed ones;
+- workflow arrows, model-input arrows, delivery arrows, and biological causal arrows are not misleadingly conflated;
+- delivery/intervention arrows are labeled when the action is not self-evident;
+- leader lines used for labels do not accidentally imply causation;
+- check marks, stars, badges, or other promotional-looking success symbols are replaced by academic labels when appropriate;
+- no critical scientific conclusion depends on red/green or any other color pair alone;
+- mutant/corrected or before/after states remain interpretable in grayscale;
+- ellipses do not create ambiguity about omitted candidates or steps;
+- connector widths, arrowheads, curvature, and line styles are consistent within each semantic class;
+- heavy glow, bevel, gradient, or drop-shadow effects do not make connectors look decorative rather than scientific.
+
 ### Visual quality
 Check hierarchy, whitespace, text density, anchor competition, arrow consistency, crossed leader lines, palette restraint, and whether the figure looks like a manuscript/thesis figure rather than a poster.
 
@@ -26,6 +43,8 @@ Reject fabricated plots, quantitative-looking curves, percentages, scale bars, o
 - L2 presentation/editability issue
 - L3 scientific risk; must fix
 - L4 structural scientific failure; regenerate
+
+Arrow/symbol issues are at least L2 when they reduce interpretability and at least L3 when they reverse, overstate, or otherwise misrepresent a scientific relationship.
 
 ## Correction router
 
@@ -48,6 +67,7 @@ When verification matters, report only a concise summary:
 - scientific confidence: high / medium / low
 - requirement coverage
 - evidence-backed vs inferred elements
+- arrow/symbol semantics: pass / needs revision
 - unresolved uncertainty
 
 Do not expose long internal audit reasoning unless the user asks for it.
