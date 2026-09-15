@@ -45,3 +45,21 @@ Choose by scientific communication goal, not by decorative preference.
 - Complex review synthesis → Hybrid
 
 For manuscript/thesis mode, prefer a single integrated figure when one continuous causal story can be shown without forced panelization.
+
+## Layout router
+
+Use the smallest layout that preserves the scientific relationship:
+
+| Evidence structure | Preferred layout | Escalate when |
+|---|---|---|
+| one causal or temporal chain | linear / top-to-bottom | parallel branches need independent space |
+| parallel mechanisms or conditions | multi-panel or grouped lanes | comparison is not readable in one lane |
+| nested biological scales | multiscale with callouts | a local mechanism cannot be read at overview scale |
+| spatial tissue/organ relationship | spatial or anatomical | sequence is more important than location |
+| feedback, cycle, or mutual regulation | radial or concentric | direction would be ambiguous in a ring |
+| mixed overview + mechanism + outcome | hybrid | any module becomes an equal competing anchor |
+
+Do not choose a layout from the number of requested entities alone. First map
+the story, branches, convergence, and scale transitions; then place modules to
+make those relationships legible. A row of icons is valid only for a genuinely
+simple workflow.
