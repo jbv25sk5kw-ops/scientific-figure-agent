@@ -1,114 +1,104 @@
 ---
 name: scientific-figure
-description: Use when creating, revising, auditing, or planning scientific mechanism figures, biomedical schematics, graphical abstracts, anatomical illustrations, experimental workflows, or thesis/manuscript figures from a research brief, paper, reference image, or client request.
+description: Use when planning, creating, revising, or auditing a scientifically grounded mechanism figure, biomedical schematic, graphical abstract, anatomical illustration, experimental workflow, or manuscript/thesis figure from a brief, paper, or reference image.
 ---
 
-# Scientific Figure
+# Scientific Figure v2
 
-## Overview
+Turn a research brief into a defensible figure plan, generation prompt, or
+editable delivery plan. Keep this entrypoint small; load only the references
+needed for the active figure type, style, output, and audit.
 
-Turn a research brief into a scientifically rigorous, visually restrained, publication-oriented figure plan and generation prompt. Prefer clarity and scientific correctness over decoration. Keep the core workflow here; load detailed domain rules from `references/` only when needed.
+## Workflow
 
-## Core workflow
+1. **Scope:** capture purpose/audience, ratio, language, claim, required entities
+   and relationships, sources/references, forbidden additions, and output needs.
+2. **Route:** choose usage mode, figure type, architecture, LD1/LD2/LD3,
+   rendering mode, and output mode from the claim—not from entity count alone.
+3. **Preflight:** define evidence, hierarchy, occupancy, entity, relationship,
+   style, editability, and risk records before generation.
+4. **Generate/rebuild:** compose one prompt; keep labels, arrows, legends, axes,
+   and simple framework geometry native-editable when requested.
+5. **Audit/correct:** compare the rendered artifact with the brief and preflight;
+   accept, edit locally, partially regenerate, or fully regenerate, and record
+   unresolved scientific risks.
 
-1. Parse the client brief: topic, intended use, required entities, relationships, outcomes, references, do-not-change items, and output/editability needs.
-2. Determine usage mode: manuscript, thesis, presentation, or competition.
-3. If a specific paper/source is supplied or the user says "based on this paper", enable SOURCE-CONSTRAINED MODE.
-4. Check missing information. If a critical biological relationship is ambiguous, do not invent it; mark it for clarification or external verification.
-5. Build a REQUIRED-ENTITY MANIFEST for scientifically essential cells, molecules, tissues, receptors, organelles, and anatomical structures. Record identity, role, location, morphology cue, and whether a visible label is required.
-6. Classify figure type and visual architecture.
-7. Determine LAYOUT DENSITY MODE: LD1 minimal, LD2 balanced, or LD3 dense scientific layout.
-8. Build the SCIENTIFIC INFORMATION ARCHITECTURE: primary story, primary anchor, supporting modules, scale transitions, and any required zoom-in/callout structure.
-9. Build the CANVAS OCCUPANCY STRATEGY: intended density, edge/corner use, module packing, and meaningful whitespace.
-10. Choose rendering mode and output mode.
-11. Apply scientific evidence boundaries, morphology/localization rules, arrow-and-symbol semantics, information architecture, layout density, visual grammar, text budget, and academic palette.
-12. Compose the generation prompt from the evidence map, entity manifest, information architecture, density mode, occupancy strategy, and semantic maps.
-13. Audit the generated image against the brief, evidence map, entity manifest, information architecture, layout-density target, canvas occupancy, and arrow/symbol semantics for scientific accuracy, requirement coverage, visual hierarchy, and misleading pseudo-data.
-14. Route correction: accept, minor edit, local edit, partial regeneration, or full regeneration.
+## Fast routing
 
-## Source-constrained mode
-
-When the task is anchored to a specific paper/source:
-- treat directly supported claims as the confirmed mechanism layer;
-- use stable structural/context knowledge only to make the figure intelligible;
-- do not add plausible but unmeasured pathway detail as confirmed;
-- separate externally verified additions from source-derived claims;
-- if a requested conclusion exceeds the source, flag it rather than visually implying it.
-
-## Hard rules
-
-- Scientific accuracy > client fidelity > completeness > visual polish.
-- Never fabricate quantitative data, curves, percentages, scale bars, or measurement-like graphics.
-- Do not turn correlation or hypothesis into confirmed causation.
-- Use standard activation/inhibition semantics; inhibition uses a T-shaped blunt line.
-- Every arrow, connector, status symbol, and color-coded state must have one clear scientific or workflow meaning.
-- Do not use color alone to encode a critical conclusion; pair it with text, shape, nucleotide identity, border style, or another redundant cue.
-- Do not let delivery arrows, model-input arrows, workflow arrows, and biological causal arrows become visually indistinguishable when that could mislead the reader.
-- Critical cells, receptors, organelles, and anatomical structures must be visually identifiable and placed in biologically plausible locations.
-- A required entity is not satisfied merely because a generic colored object appears; its identity must be supported by morphology, location, context, or a concise label.
-- For complex biomedical figures, prefer a hierarchy of one primary scientific story plus subordinate supporting modules rather than a row of equally large generic icons.
-- Use zoom-in/callout transitions only when they clarify a real nested scientific relationship such as organism→organ, tissue→cell, cell→molecule, or material→microstructure.
-- High information density is acceptable only when the global mechanism remains immediately readable and each added element contributes scientific meaning.
-- White background is acceptable; meaningless whitespace is not. Do not confuse academic cleanliness with an under-filled canvas.
-- In LD3 mode, prefer full-canvas scientific composition, compact module spacing, deliberate edge/corner use, and meaningful callouts. Do not add unsupported biology simply to fill space.
-- Do not enlarge a few generic icons merely to occupy the page; fill space with scientifically meaningful modules.
-- For manuscript/thesis figures, default to low-saturation, high-lightness academic colors, restrained text, flat connectors, and whitespace appropriate to the selected density mode.
-- If the reader can infer a point from the visual structure, do not repeat it as a sentence inside the figure.
-- Maintain one primary visual anchor and no more than two secondary anchors in manuscript/thesis mode.
-
-## Reference routing
-
-Read only the references needed for the current task:
-
-- `references/scientific-accuracy.md` — evidence classes, uncertainty, source-constrained mode, localization, causal claims, and scientific QA.
-- `references/figure-types.md` — figure-type and visual-architecture routing.
-- `references/scientific-information-architecture.md` — multi-scale composition, module hierarchy, zoom-in/callout routing, information density, and biomedical composition patterns.
-- `references/layout-density-and-canvas-occupancy.md` — LD1/LD2/LD3 routing, full-canvas composition, four-corner use, module packing, and whitespace audit.
-- `references/rendering-output.md` — 2D/semi-3D/hybrid rendering, raster vs hybrid/full vector, and text strategy.
-- `references/academic-style.md` — pale academic palette, typography, layout, text budget, and visual restraint.
-- `references/arrow-symbol-semantics.md` — workflow arrows, activation/inhibition, model inputs, delivery arrows, selection symbols, color redundancy, and connector consistency.
-- `references/morphology-localization.md` — entity-manifest morphology and spatial-localization checks.
-- `references/reference-decomposition.md` — how to extract visual grammar, information architecture, and density strategy from a reference image without copying unsupported science.
-- `references/post-generation-audit.md` — scientific/visual audit and correction routing after generation.
-- `references/test-cases.md` — regression cases from SARS, HIV, muscle-injury, and AI-assisted prime-editing figures.
-
-## Quick routing
-
-| Signal | Default |
+| Signal | Route |
 |---|---|
-| Journal/manuscript/review | manuscript mode |
-| Thesis/dissertation | thesis mode |
-| PPT/defense/seminar | presentation mode |
-| Competition/exhibition | competition mode |
-| Specific paper/source supplied | source-constrained mode |
-| Pathway/network/workflow | clean vector |
-| Cell mechanism/membrane/organelle | semi-3D |
-| Nanoparticle/ECM/microenvironment | biomedical 3D |
-| Organ/muscle/bone anatomy | anatomical 3D |
-| Mixed biological structure + clean arrows | hybrid |
-| Organism/organ/tissue/cell/molecule nested story | multiscale + zoom-in/callout |
-| Biomaterial or therapy from preparation to tissue outcome | modular multiscale composition + LD3 |
-| Dense biomaterials/tissue-engineering reference | LD3 dense scientific layout |
-| Explicit minimal/clean/simple request | LD1 minimal |
-| Standard manuscript mechanism without dense reference | LD2 balanced |
+| manuscript/paper/review | manuscript + LD2; low-saturation academic style |
+| thesis | thesis + LD2; slightly more explanatory labels |
+| slide/defense/seminar | presentation; larger text and stronger hierarchy |
+| competition/cover | competition; more contrast without weakening evidence |
+| graphical abstract | one dominant narrative; usually linear or hybrid |
+| mechanism/pathway/workflow | clean vector or hybrid; route by causal/temporal structure |
+| cell/membrane/organelle | semi-3D or hybrid |
+| nanoparticle/ECM/biomaterial | biomedical 3D or hybrid; consider LD3 |
+| organ/muscle/bone/joint | anatomical context plus hybrid/anatomical rendering |
+| nested organism→organ→tissue→cell→molecule | multiscale with meaningful callouts |
+| named paper/dataset/source image | source-constrained mode |
+
+Use the smallest architecture that preserves the scientific relationship. Keep a
+single integrated story when panelization would only create a row of icons.
+
+## Evidence boundary
+
+Enable source-constrained mode for a paper, dataset, source figure, or “based
+on this” request. Separate confirmed, structural/context, externally verified,
+inferred, and unresolved claims. Only confirmed claims may be drawn as
+established mechanism; qualify hypotheses and correlations. A reference image
+may supply visual grammar, density, composition, and annotation logic, never
+unsupported biology or pseudo-data. Never fabricate plots, percentages, curves,
+scale bars, axes, or measurement-like marks.
+
+## Required preflight
+
+Record: usage, figure type, architecture, density, rendering, output; evidence
+map and source status; one primary anchor plus at most two secondary anchors in
+manuscript/thesis mode; required-entity manifest (identity, role, location,
+morphology cue, label requirement); required relationships and direction;
+information architecture (modules, scales, branches, callouts); canvas occupancy
+strategy (density, edge/corner roles, packing, meaningful whitespace);
+arrow/symbol semantic map; style profile; editability boundary; and risks.
+
+An entity is not satisfied by a generic colored shape: identity needs morphology,
+location, context, or a concise label.
+
+## Non-negotiable checks
+
+- Scientific accuracy and evidence boundaries outrank visual polish.
+- Solid arrows show confirmed flow/activation; inhibition/blockade uses a blunt
+  T-ended bar; dashed/dotted routes qualify hypotheses or indirect links.
+- Distinguish workflow, model-input, delivery, and biological-causal connectors
+  when their meanings could be confused.
+- Do not use color alone for a critical state; add text, shape, border, sequence,
+  or another redundant cue, and keep parallel outcomes parallel.
+- In LD3, use meaningful modules/callouts at the edges and corners; never invent
+  unsupported biology to fill the canvas.
+- For manuscript/thesis work, prefer low-saturation/high-lightness academic
+  styling, short exact labels, flat connectors, and no glow/gloss/badge clutter.
+
+## Progressive references
+
+| Need | Read |
+|---|---|
+| evidence, source constraints, schematic/data boundary | [scientific-accuracy.md](references/scientific-accuracy.md) |
+| figure type, architecture, automatic layout choice | [figure-types.md](references/figure-types.md), [scientific-information-architecture.md](references/scientific-information-architecture.md) |
+| LD1/LD2/LD3, occupancy, whitespace | [layout-density-and-canvas-occupancy.md](references/layout-density-and-canvas-occupancy.md) |
+| palette, BioRender-inspired biomedical grammar, typography | [academic-style.md](references/academic-style.md), [visual-style-routing.md](references/visual-style-routing.md) |
+| entity morphology and localization | [morphology-localization.md](references/morphology-localization.md) |
+| arrows, symbols, color redundancy | [arrow-symbol-semantics.md](references/arrow-symbol-semantics.md) |
+| reference-image decomposition | [reference-decomposition.md](references/reference-decomposition.md) |
+| raster/hybrid/full-vector choice | [rendering-output.md](references/rendering-output.md) |
+| SVG/PPTX boundary, manifests, delivery gates | [editable-delivery-and-qa.md](references/editable-delivery-and-qa.md) |
+| rendered audit and correction routing | [post-generation-audit.md](references/post-generation-audit.md) |
+| v2 rationale and regressions | [comparative-design-principles.md](references/comparative-design-principles.md), [test-cases.md](references/test-cases.md) |
 
 ## Output contract
 
-Before generation, produce internally:
-- usage mode
-- source-constrained mode: on/off
-- figure type
-- visual architecture
-- layout density mode: LD1 / LD2 / LD3
-- canvas occupancy strategy: target density, edge/corner use, module packing, whitespace intent
-- rendering mode
-- output mode
-- evidence map for required claims
-- required-entity manifest: identity, role, location, morphology cue, label requirement
-- required relationships and direction
-- scientific information architecture: primary story, primary anchor, supporting modules, scale transitions, callouts
-- arrow/symbol semantic map for any nontrivial connector classes
-- scientific risks/uncertainties
-- final generation prompt
-
-After generation, audit the rendered image against the same evidence map, entity manifest, scientific information architecture, density/occupancy strategy, and arrow/symbol semantic map. Return the final image plus a concise scientific-confidence note when the task requires verification.
+The final prompt or audit must expose the preflight decisions, requirement
+coverage, evidence-backed versus inferred elements, semantic arrows, editability
+status, and unresolved uncertainty. For editable delivery, include truthful
+PPTX/SVG/raster outputs plus asset/editability and QA notes; an SVG wrapper around
+a raster asset is not a path-editable vector.

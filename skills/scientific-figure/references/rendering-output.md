@@ -1,5 +1,8 @@
 # Rendering and Output
 
+Use this file for choosing a rendering/output mode. For the actual editable
+boundary and delivery gates, read `editable-delivery-and-qa.md`.
+
 ## Rendering mode
 
 - RM01 Clean vector — pathways, workflows, networks, study diagrams

@@ -1,5 +1,9 @@
 # Academic Style
 
+Use this file for manuscript/thesis defaults. Use
+`visual-style-routing.md` when the user asks for a specific visual language or
+when palette/style needs to be routed by figure type.
+
 ## Usage modes
 
 - UM01 Manuscript — minimal text, no slogan box, high whitespace, restrained palette, editable labels
@@ -75,3 +79,10 @@ For detailed connector rules, use `arrow-symbol-semantics.md`.
 ## Typography
 
 Prefer Arial/Helvetica/Inter/Source Sans or equivalent clean sans serif. Use dark gray/black body labels, consistent hierarchy, and editable text when possible.
+
+## Style profile fields
+
+Record the selected background, palette family, semantic color bindings,
+saturation/lightness intent, stroke/outline treatment, text budget, and whether
+the final labels will be native editable text. This keeps a low-saturation
+choice reproducible without turning a palette preference into a universal rule.

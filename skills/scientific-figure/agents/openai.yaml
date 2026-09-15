@@ -1,3 +1,3 @@
 display_name: Scientific Figure
 short_description: Plan, generate, and audit rigorous scientific figures.
-default_prompt: Create or revise a publication-oriented scientific figure from the user's brief, applying scientific accuracy, visual hierarchy, academic styling, and post-generation audit rules from this skill.
+default_prompt: Plan, create, revise, or audit a publication-oriented scientific figure from the user's brief, routing figure type, layout density, low-saturation academic style, scientific evidence, editability, and post-generation QA from this skill.

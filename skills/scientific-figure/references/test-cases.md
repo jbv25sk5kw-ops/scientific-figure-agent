@@ -54,6 +54,57 @@ Expected behavior:
 - decorative ellipses are replaced by grouped labels such as `multiple candidates` when they create ambiguity
 - no glow, heavy shadows, or gradient-heavy connectors in manuscript mode
 
+## Case 5 — Low-saturation biomedical style routing
+
+Brief:
+Create a manuscript-style graphical abstract for a nanoparticle targeting
+macrophages in an inflamed tissue. Use a restrained academic palette and keep
+the mechanism readable at a glance.
+
+Expected behavior:
+- route to manuscript usage, a single dominant mechanism, and LD2 unless the
+  brief explicitly requests a dense composition;
+- choose a white/near-white ground, high-lightness low-saturation hues, dark
+  gray text, and explicit semantic color bindings;
+- use original biomedical compartment grammar (tissue → cell → membrane or
+  receptor) without copied commercial iconography;
+- encode therapeutic versus inflammatory state with labels or shape/border
+  cues in addition to color;
+- reject glow, glossy plastic, decorative gradients, and poster-like badges.
+
+## Case 6 — Automatic figure-type and layout routing
+
+Brief:
+Create a dense tissue-engineering figure showing scaffold preparation →
+microstructure → cell response → tissue repair, with an overview of the defect
+site and a zoom into the cell/material interface.
+
+Expected behavior:
+- route to a multiscale hybrid architecture with meaningful callouts and LD3;
+- keep the defect-site overview and repaired endpoint subordinate to the
+  scaffold–cell interface, which is the primary anchor;
+- use compact modules and deliberate edge/corner roles rather than a row of
+  equally large icons or unsupported filler biology;
+- preserve a clear reading path from preparation to outcome and keep parallel
+  validation branches parallel.
+
+## Case 7 — Editable delivery boundary and QA
+
+Brief:
+Convert a supplied biomedical reference PNG into an editable PPTX and SVG.
+Preserve its panels and arrows, regenerate complex tissue illustrations as
+separate assets, and deliver a truthful QA note.
+
+Expected behavior:
+- route to OM02 hybrid unless the source is simple enough for full vector;
+- rebuild labels, frames, legends, arrows, and simple geometry as native
+  editable objects;
+- never crop or extract source pixels as deliverable assets; use regenerated
+  no-text assets for complex scenes;
+- distinguish an SVG image wrapper from true path-vector content;
+- record source constraints, asset/editability mapping, arrowhead destinations,
+  label/alpha checks, preview paths, and any failed or approved gates.
+
 ## Pass criteria
 
 A revision is better only if it measurably improves:
@@ -63,5 +114,7 @@ A revision is better only if it measurably improves:
 - visual hierarchy
 - arrow/symbol semantic clarity
 - editability where requested
+- style/palette routing and accessibility
+- truthful editable-delivery and QA status
 
 More text or more rules alone do not count as improvement.
