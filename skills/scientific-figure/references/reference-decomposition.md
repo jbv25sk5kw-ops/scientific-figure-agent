@@ -18,6 +18,20 @@ Record:
 - whitespace and alignment
 - primary and secondary visual anchors
 
+## Extract layout density and canvas occupancy
+
+Also record how tightly the reference uses the page:
+- density mode: minimal, balanced, or dense
+- approximate canvas occupancy
+- whether the four corners carry scientific information
+- edge-to-edge vs centered composition
+- module spacing and packing
+- whether large blank regions are meaningful or accidental
+- whether the reference fills space with scientific modules or merely enlarges decorative objects
+- whether white background is used with high content density
+
+If the reference is a dense biomaterials/tissue-engineering style figure, treat high occupancy, compact modules, and deliberate corner use as compositional features worth preserving when scientifically appropriate.
+
 ## Extract scientific information architecture
 
 Also inspect how the reference organizes scientific information:
@@ -41,6 +55,8 @@ Prefer borrowing this structural logic over copying decorative appearance.
 - synthesis/preparation workflow feeding into mechanism and biological validation
 - cell-level mechanism embedded inside a larger tissue or defect context
 - final repaired/regenerated state positioned as a scientific endpoint rather than a promotional badge
+- full-canvas layout with meaningful scientific content distributed across corners and edges
+- one primary mechanism anchor plus 2–4 subordinate modules that explain preparation, structure, cell response, validation, or outcome
 
 ## Do not transfer unsupported science
 
@@ -53,6 +69,10 @@ A reference image may guide:
 - scale-transition strategy
 - callout structure
 - information-density strategy
+- layout density
+- corner use
+- module packing
+- canvas occupancy strategy
 
 It must not automatically supply:
 - entities not requested by the client
@@ -71,6 +91,7 @@ Classify the reference as one or more of:
 - color reference
 - rendering reference
 - information-architecture reference
+- density/occupancy reference
 
 If scientific-content reference is claimed, verify that the source actually supports the borrowed content.
 
@@ -82,5 +103,6 @@ A visually impressive reference is not automatically a good scientific template.
 - scale communication
 - object specificity
 - interpretability
+- canvas utilization
 
-Do not copy overcrowding, unreadably small labels, excessive panels, decorative gradients, or unsupported pseudo-data simply because they appear in the reference.
+Do not copy overcrowding, unreadably small labels, excessive panels, decorative gradients, unsupported pseudo-data, or complexity added only to avoid whitespace.
